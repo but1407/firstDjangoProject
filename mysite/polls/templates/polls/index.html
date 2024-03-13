@@ -1,0 +1,15 @@
+ {% extends 'polls/base.html' %}
+
+{% block content %}
+    
+    
+    <h2>taisan cua toi</h2>
+    <ul>
+        {% comment %} {% count =  len(taisan) %} {% endcomment %}
+        {% for item in taisan %}
+            <li>{{ item }}</li>
+        {% endfor %} 
+        {% comment %} <h2>tong tai san: {{ count }}</h2> {% endcomment %}
+    </ul>
+
+{% endblock content %}

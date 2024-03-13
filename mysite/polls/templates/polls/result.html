@@ -1,0 +1,16 @@
+{% extends 'polls/base.html' %}
+
+
+
+{% block content %}
+<h1>Ket qua cua cuoc binh chon: {{ qs.question_text }}</h1>
+{% if qs  %}
+    <ul>
+        {% for q in qs.choice_set.all %}
+            <li>{{ q.choice_text }} : {{ q.vote }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+        
+{% endblock content %}
+    

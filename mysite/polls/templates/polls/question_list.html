@@ -1,0 +1,16 @@
+{% extends 'polls/base.html' %} 
+
+
+{% block content %}
+
+    {% if list_question %}
+        
+        {% for item in list_question  %}
+           <a href="{% url 'detail' item.id  %}">{{ item }}</a> </br>
+        {% endfor %}
+        {% else %}
+            <h3 style="color:bisque">Không có dữ liệu</h3>
+    {% endif %}
+        
+{% endblock content %}
+    
